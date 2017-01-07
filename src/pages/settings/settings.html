@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Search Radius (in km)</ion-label>
+    <ion-badge item-right>{{radius}}</ion-badge>
+  </ion-list-header>
+    <ion-item>
+      
+      <!--<ion-label stacked></ion-label>-->
+      <ion-range min="1" max="20" [(ngModel)]="radius" color="primary" pin="true" debounce=800 (ionChange)="onRadiusChange(radius)">
+        <ion-label range-left>1</ion-label>
+        <ion-label range-right>20</ion-label>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+</ion-content>

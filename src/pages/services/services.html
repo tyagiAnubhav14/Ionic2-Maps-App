@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Sevices
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-grid>
+  <ion-row wrap >
+    <ion-col width-50 *ngFor="let service of services">
+      <button ion-button full icon-left (click)="goToPlaces(service)">
+        <ion-icon name="{{service.icon}}"></ion-icon>
+         {{service.name}}</button>
+        </ion-col>    
+  </ion-row>
+</ion-grid>
+</ion-content>
